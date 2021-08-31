@@ -6,7 +6,7 @@
 const quoteContainer = document.getElementById("quote-container");
 const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
-const weiboBtn = document.getElementById("weibo");
+const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
 
 // fetch("https://type.fit/api/quotes")
@@ -29,6 +29,7 @@ const newQuoteBtn = document.getElementById("new-quote");
 
 let apiQuotes = [];
 
+// ----------------------------------------------------------------------------------------
 const newQuote = function () {
   // 注意Math.random()后面是要跟()，不然没执行，我在这个错误上浪费了很多时间！
   const quote = apiQuotes[Math.round(Math.random() * apiQuotes.length)];
@@ -51,6 +52,16 @@ const newQuote = function () {
   }
 };
 
+// ----------------------------------------------------------------------------------------
+// 发推特
+function Tweet() {
+  const url = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
+
+  // 这里要做的很简单，用window.open打开网站即可，_blank代表用新的标签打开
+  window.open(url, "_blank");
+}
+
+// ----------------------------------------------------------------------------------------
 // async函数是AsyncFunction构造函数的实例， 并且其中允许使用await关键字。async和await关键字让我们可以用一种更简洁的方式写出基于Promise的异步行为，而无需刻意地链式调用promise。
 async function getQuotes() {
   // 找到api的网站并定义
@@ -66,5 +77,7 @@ async function getQuotes() {
   } catch (error) {}
 }
 
+// ----------------------------------------------------------------------------------------
 // 监听newQuote按钮，执行getQuptes函数
 newQuoteBtn.addEventListener("click", getQuotes);
+twitterBtn.addEventListener("click", Tweet);

@@ -68,16 +68,16 @@ body {
   justify-content: space-between;
 }
 
-.weibo-button:hover {
+.twitter-button:hover {
   /* 当光标位于微博标签按钮之上时，改变颜色*/
-  color: rgba(208, 53, 76, 1);
+  color: rgb(103, 187, 230);
 }
 
-.weibo-button {
+.twitter-button {
   padding: 3px 20px;
 }
 
-.icon-weibo {
+.icon-tuite1 {
   font-size: 1.5rem;
 }
 
@@ -132,7 +132,7 @@ button {
     font-size: 1rem;
   }
 
-  .icon-weibo {
+  .icon-tuite1 {
     font-size: 1.3rem;
   }
 
