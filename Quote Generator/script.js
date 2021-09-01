@@ -8,6 +8,7 @@ const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
+const loader = document.getElementById("loader");
 
 // fetch("https://type.fit/api/quotes")
 //   .then(function (response) {
@@ -76,6 +77,9 @@ async function getQuotes() {
     //catch要设置参数框
   } catch (error) {}
 }
+
+// ----------------------------------------------------------------------------------------
+// loader设置
 
 // ----------------------------------------------------------------------------------------
 // 监听newQuote按钮，执行getQuptes函数

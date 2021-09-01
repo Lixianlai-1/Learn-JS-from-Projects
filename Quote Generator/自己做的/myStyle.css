@@ -17,7 +17,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   /* 中文字体 */
-  font-family: "Long Cang", cursive;
+  /* font-family: "Long Cang", cursive; */
   /* 字体排中间 */
   text-align: center;
   color: #05000c;
@@ -40,8 +40,16 @@ body {
   box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
+.quote {
+  font-size: 2rem;
+}
+
 .author-box {
   padding-top: 20px;
+}
+
+.author {
+  font-size: 1.4rem;
 }
 
 .button-container {
@@ -52,6 +60,56 @@ body {
 }
 
 button {
+  font-size: 1rem;
+  color: #dfdbe5a8;
   padding: 10px 20px;
-  box-shadow: 0 0.3rem rgba(183, 183, 183, 0.4);
+  box-shadow: 0 0.3rem rgba(128, 128, 128, 0.959);
+  border-radius: 10px;
+  background-color: #05000cc1;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #dfdbe5;
+}
+
+button:active {
+  transform: translate(0, 0.2rem);
+  box-shadow: 0 0.4rem rgba(194, 192, 192, 0.1);
+}
+
+.icon-weibo {
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 900px) {
+  .quote {
+    font-size: 1.4rem;
+  }
+
+  .quote-container {
+    margin: 10px;
+    /* padding: auto 20px; */
+  }
+
+  .icon-quotation {
+    font-size: 2rem;
+    padding-right: 4px;
+  }
+
+  .author {
+    font-size: 1rem;
+  }
+
+  .icon-weibo {
+    font-size: 1.3rem;
+  }
+
+  #new-quote {
+    font-size: 1rem;
+  }
+
+  .button-container {
+    padding-top: 7px;
+  }
 }
